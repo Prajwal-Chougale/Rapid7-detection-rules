@@ -1,0 +1,32 @@
+#Summary
+The list of countries provided by the client after reviewing the 90 days logs typiclly from where they are frequently seeing logs and which was unexpected was; 
+the locations were: Argentina, China, Russia, Ukraine, United Arab Emirates, Saudi Arabia, Spain, Japan, Taiwan, Singapore.
+
+#Alert logic
+FROM Ingress_logs
+WHERE
+    country IN (
+        "Argentina",
+        "China",
+        "Russia",
+        "Ukraine",
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Spain",
+        "Japan",
+        "Taiwan",
+        "Singapore"
+    )
+    OR
+    country_code IN (
+        "AR",
+        "CN",
+        "RU",
+        "UA",
+        "AE",
+        "SA",
+        "ES",
+        "JP",
+        "TW",
+        "SG"
+    )
