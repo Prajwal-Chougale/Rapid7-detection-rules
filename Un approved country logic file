@@ -1,8 +1,8 @@
-#Summary
+# Summary
 The list of countries provided by the client after reviewing the 90 days logs typiclly from where they are frequently seeing logs and which was unexpected was; 
 the locations were: Argentina, China, Russia, Ukraine, United Arab Emirates, Saudi Arabia, Spain, Japan, Taiwan, Singapore.
 
-#Alert logic
+# Alert logic
 FROM Ingress_logs
 WHERE
     country IN (
@@ -30,3 +30,5 @@ WHERE
         "TW",
         "SG"
     )
+
+## Note: This is the only code part of it, rest is different conditions which we need to select to configure the alert.
